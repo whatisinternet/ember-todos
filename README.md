@@ -1,3 +1,5 @@
+Directly from: http://thetechcofounder.com/getting-started-with-ember-js-using-ember-cli/
+
 # Todo-mvc
 
 This README outlines the details of collaborating on this Ember application.
