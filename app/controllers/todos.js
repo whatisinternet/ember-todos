@@ -21,6 +21,16 @@ export default Ember.ArrayController.extend({
             todo.save();
         }
     },
+    allAreDone: function(key, value) {
+        console.log(key + ": " + value);
+        if (value === undefined) {
+            return this.get('length') > 0 && this.isEvery('isCompleted', true);
+        } else {
+            this.setEach('isCompleted', value);
+            this.invoke('save');
+            return value;
+        }
+    }.property('@each.isCompleted'),
     hasCompleted: function() {
         return this.get('completed') > 0;
     }.property('completed'),
