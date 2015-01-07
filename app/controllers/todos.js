@@ -48,4 +48,3 @@ export default Ember.ArrayController.extend({
         return (remaining === 1) ? 'item' : 'items';
     }.property('remaining')
 });
-});
